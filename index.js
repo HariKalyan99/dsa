@@ -1635,32 +1635,101 @@
 
 // console.log(findIntersection([1,2,4,7,7], 5));
 
-function longestSubstring(s, k){
-  let l = 0, r = 0;
-  let n = s.length;
-  let map = new Map();
-  let maxLen = 0;
-  while(r<n){
-    if(map.has(s[r])){
-      map.set(s[r] , map.get(s[r]) + 1)
-    }else{
-      map.set(s[r], 1)
-    }
+// function longestSubstring(s, k){
+//   let l = 0, r = 0;
+//   let n = s.length;
+//   let map = new Map();
+//   let maxLen = 0;
+//   while(r<n){
+//     if(map.has(s[r])){
+//       map.set(s[r] , map.get(s[r]) + 1)
+//     }else{
+//       map.set(s[r], 1)
+//     }
 
-    while(l<n && map.size > k){
-      if(map.get(s[l]) == 1){
-        map.delete(s[l])
-      }else{
-        map.set(s[l], map.get(s[l]) - 1)
-      }
-      l++;
-    }
+//     while(l<n && map.size > k){
+//       if(map.get(s[l]) == 1){
+//         map.delete(s[l])
+//       }else{
+//         map.set(s[l], map.get(s[l]) - 1)
+//       }
+//       l++;
+//     }
 
-    let len = r-l+1;
-    maxLen = Math.max(len, maxLen)
-    r++
+//     let len = r-l+1;
+//     maxLen = Math.max(len, maxLen)
+//     r++
+//   }
+//   return maxLen
+// }
+
+// console.log(longestSubstring("Xyyzya", 3))
+
+
+
+// function subarraySumZero(n, arr){
+//   let set = new Set();
+//   let sum = 0;
+//   for(let i = 0; i<n; i++){
+//     sum+=arr[i];
+//     if(sum == 0 || set.has(sum)){
+//       return "Yes";
+//     }else{
+//       set.add(sum);
+//     }
+  
+//   }
+
+//   return "No";
+// }
+
+
+// console.log(subarraySumZero(4, [4,5,-5,5]))
+
+
+
+function largestSubarrayWithZero(n, arr){
+  let prefixSum = new Array(n);
+
+  prefixSum[0] = arr[0];
+  for(let i =1; i<n; i++){
+    prefixSum[i] = prefixSum[i-1] + arr[i]
   }
-  return maxLen
+
+  let x = -1;
+  let y = -1;
+  let prefixMap = new Map();
+  let maxLen = 0;
+
+  for(let i = 0;  i<n; i++){
+    if(prefixSum[i] == 0){
+      maxLen = i + 1;
+      x = 0;
+      y = i;
+      continue;
+    }
+
+    if(prefixMap.has(prefixSum[i])){
+      let len = i - prefixMap.get(prefixSum[i]);
+      if(len > maxLen){
+        maxLen = len;
+        y = i;
+        x = prefixMap.get(prefixSum[i]) + 1
+      }
+    }else{
+      prefixMap.set(prefixSum[i], i)
+    }
+  }
+  if(x == -1 && y == -1){
+    return [-1];
+  }
+
+  let result = [];
+  for(let i = x; i<=y; i++){
+    result.push(arr[i])
+  }
+
+  return result;
 }
 
-console.log(longestSubstring("Xyyzya", 3))
+console.log(largestSubarrayWithZero(6, [2,3,1,-4,0,6]))
