@@ -1688,51 +1688,51 @@
 
 
 
-function largestSubarrayWithZero(n, arr){
-  let prefixSum = new Array(n);
+// function largestSubarrayWithZero(n, arr){
+//   let prefixSum = new Array(n);
 
-  prefixSum[0] = arr[0];
-  for(let i =1; i<n; i++){
-    prefixSum[i] = prefixSum[i-1] + arr[i]
-  }
+//   prefixSum[0] = arr[0];
+//   for(let i =1; i<n; i++){
+//     prefixSum[i] = prefixSum[i-1] + arr[i]
+//   }
 
-  let x = -1;
-  let y = -1;
-  let prefixMap = new Map();
-  let maxLen = 0;
+//   let x = -1;
+//   let y = -1;
+//   let prefixMap = new Map();
+//   let maxLen = 0;
 
-  for(let i = 0;  i<n; i++){
-    if(prefixSum[i] == 0){
-      maxLen = i + 1;
-      x = 0;
-      y = i;
-      continue;
-    }
+//   for(let i = 0;  i<n; i++){
+//     if(prefixSum[i] == 0){
+//       maxLen = i + 1;
+//       x = 0;
+//       y = i;
+//       continue;
+//     }
 
-    if(prefixMap.has(prefixSum[i])){
-      let len = i - prefixMap.get(prefixSum[i]);
-      if(len > maxLen){
-        maxLen = len;
-        y = i;
-        x = prefixMap.get(prefixSum[i]) + 1
-      }
-    }else{
-      prefixMap.set(prefixSum[i], i)
-    }
-  }
-  if(x == -1 && y == -1){
-    return [-1];
-  }
+//     if(prefixMap.has(prefixSum[i])){
+//       let len = i - prefixMap.get(prefixSum[i]);
+//       if(len > maxLen){
+//         maxLen = len;
+//         y = i;
+//         x = prefixMap.get(prefixSum[i]) + 1
+//       }
+//     }else{
+//       prefixMap.set(prefixSum[i], i)
+//     }
+//   }
+//   if(x == -1 && y == -1){
+//     return [-1];
+//   }
 
-  let result = [];
-  for(let i = x; i<=y; i++){
-    result.push(arr[i])
-  }
+//   let result = [];
+//   for(let i = x; i<=y; i++){
+//     result.push(arr[i])
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(largestSubarrayWithZero(6, [2,3,1,-4,0,6]))
+// console.log(largestSubarrayWithZero(6, [2,3,1,-4,0,6]))
 
 
 
@@ -2320,3 +2320,371 @@ console.log(largestSubarrayWithZero(6, [2,3,1,-4,0,6]))
 
 // console.log(isValid("()[]{}"));   // Output: true
 // console.log(isValid("(]"));       // Output: false
+
+
+//practice
+
+// function decodeStr(str){
+//   let n = str.length;
+//   let result = "";
+
+//   for(let i = 0; i<n; i++){
+//     if(str[i] !== "]"){
+//       result+=str[i];
+//     }else{
+//       let temp = "";
+//       while(result.length > 0 && result[result.length - 1] !== "["){
+//         temp = result[result.length - 1 ] + temp;
+//         result = result.slice(0, -1);
+//       }
+//       result = result.slice(0, -1);
+//       let num = "";
+//       while(result.length > 0 && !isNaN(result[result.length - 1])){
+//         num = result[result.length - 1] + num;
+//         result = result.slice(0, -1);
+//       }
+
+//       let numInt = parseInt(num);
+
+//       while(numInt--){
+//         result+=temp;
+//       }
+//     }
+//   }
+
+//   return result
+// }
+// console.log(decodeStr("3[a] 2[bc]"))
+
+// function remix(S, A){
+//   let arr = [];
+//   for(let i =0 ; i<A.length; i++){
+//     arr[A[i]] = S[i]
+//   }
+//   return arr
+// }
+
+
+
+
+// console.log(remix("abcd", [0, 3, 1, 2]));
+
+
+// function findSubstringIndices(S, L){
+//   let wordLength = L[0].length;
+//   let listLength = L.length;
+//   let n = S.length;
+
+//   let ans = [];
+//   for(let i = 0; i<=n - wordLength*listLength; i++){
+//     let sortedString = S.substring(i, wordLength*listLength + i).split("").sort().join("");
+//     let compareList = L.join("").split("").sort().join("");
+
+//     if(sortedString == compareList){
+//       ans.push(i)
+//     }
+//   }
+//   return ans
+// }
+
+
+
+// const S = "barfooapplefoobar";  
+// const L = ["foo", "bar"];
+// console.log(findSubstringIndices(S, L));
+
+
+
+// function pattern(n){
+//   let start = 1;
+//   for(let i = 0; i<n; i++){
+//     i%2 == 0 ? start = 1 : start = 0;
+//     let row = "";
+//     for(let j = 0; j<=i; j++){
+//       row+=start;
+//       start = 1 - start;
+//     }
+//     console.log(row)
+//   }
+
+// }
+
+
+// console.log(pattern(5))
+
+// function pattern(str){
+//   for(let i = 0; i<str.length; i++){
+//     let row = "";
+//     for(let j = 0; j<=i; j++){
+//       row+=str[i];
+//     }
+//     console.log(row)
+//   }
+// }
+
+// console.log(pattern("ABCDE"))
+
+
+// function pattern(star){
+//   let row = ""
+//   for(let i =0; i<5; i++){
+//     for(let  j = 0; j<=i; j++){
+//       row+=star
+//     }
+//     row+="\n"
+//   }
+
+//   for(let i = 4; i>=0; i--){
+//     for(let j = 0; j<=i; j++){
+//       row+=star;
+//     }
+//     row+="\n"
+//   }
+//   return row
+// }
+
+// console.log(pattern("*"))
+
+// for(let i = 5; i>=1; i--){
+//   let row = "";
+//   for(let j = 1; j<=i; j++){
+//     row+=j
+//   }
+//   console.log(row)
+// }
+
+// function pattern(n){
+//   for(let i = 5; i>=1; i--){
+//     let row = ""
+
+//     for(let j = 1; j<=i; j++){
+//       row+=" "
+//     }
+    
+//     for(let k = 1; k<=n-i+1; k++){
+//       row+=k + " "
+//     }
+//     console.log(row)
+
+    
+//   }
+// }
+
+// console.log(pattern(5))
+
+
+// function maxProfit(money, buyPrices, sellPrices){
+//   let i = 0;
+//   let j = 0;
+//   let profit = 0;
+//   while(i < buyPrices.length && j < sellPrices.length && profit < money){
+//     if(sellPrices[j] - buyPrices[i] > profit){
+//       profit = sellPrices[j] - buyPrices[i]; 
+//     }
+//     i++;
+//     j++
+//   }
+//   return profit
+// }
+
+
+// console.log(maxProfit(20, [5,1,2], [2,10,10]))
+
+// function maxProfit(prices){
+//   let min = prices[0];
+//   let profit = 0;
+//   for(let i = 1; i<prices.length; i++){
+//     min = Math.min(min, prices[i]);
+    
+//   }
+//   let index = prices.findIndex(x => x == min)
+//   for(let i = index + 1; i<prices.length; i++){
+//     if(prices[i] - min > profit){
+//       profit = prices[i] - min;
+//     }
+//   }
+
+//   return profit
+// }
+
+// let prices = [7, 1, 5, 3, 6, 4];
+// console.log(maxProfit(prices));
+
+
+// function maxSubArray(nums){
+//   let currentSum = nums[0];
+//   let maxSum = nums[0];
+
+//   for(let i= 1; i<nums.length; i++){
+//     currentSum = Math.max(nums[i], currentSum + nums[i]);
+//     maxSum = Math.max(maxSum, currentSum);
+//   }
+
+//   return maxSum
+// }
+
+
+
+
+// let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// console.log(maxSubArray(nums))
+
+
+// function minimizeSumAfterOperations(arr, k){
+//   arr.sort((a,b) => a - b)
+//   for(let i = 0; i<k; i++){
+//     let removedEle = arr.pop();
+//     let dividedEle = Math.ceil(removedEle/2);
+//     insertInSortedFashion(dividedEle, arr);
+//   }
+//   return arr
+// }
+
+// function insertInSortedFashion(val, arr){
+//   let i = 0;
+//   while(i < arr.length && arr[i] < val){
+//     i++;
+//   }
+//   arr.splice(i, 0, val)
+// }
+
+// let arr = [12,10,14];
+// let k = 2;
+// let result = minimizeSumAfterOperations(arr, k);
+// console.log("Minimized sum after", k, "operations:", result);  
+
+
+// function countBinaryStrings(N){
+//   let prevZeroCount = 1;
+//   let prevOneCount = 1;
+
+//   if(N == 1) return 2;
+//   for(let i = 2; i<=N; i++){
+//     let currentZeroCount = prevZeroCount + prevOneCount;
+//     let currentOneCount = prevZeroCount;
+
+//     prevZeroCount = currentZeroCount;
+//     prevOneCount = currentOneCount;
+//   }
+
+//   return prevOneCount + prevZeroCount
+// }
+
+// console.log(countBinaryStrings(3))
+
+// function minSumOfTwoNumbers(N, arr){
+//   arr.sort((a,b) => a - b);
+//   let num1 = "";
+//   let num2 = "";
+
+//   for(let i = 0; i<N; i++){
+//     if(i%2 == 0){
+//       num1+=arr[i];
+//     }else{
+//       num2+=arr[i]
+//     }
+
+//   }
+
+//   return Number(num1) + Number(num2) 
+// }
+
+
+// const N = 6;
+// const Arr = [6, 8, 4, 5, 2, 3];
+// console.log(minSumOfTwoNumbers(N, Arr))
+
+
+
+
+// function replaceWords(d, s){
+//   let arrStr = s.split(" ");
+//   for(let i =0; i<d.length; i++){
+//     let word = d[i];
+//     for(let j = 0; j<arrStr.length; j++){
+//       if(arrStr[j].includes(word)){
+//         arrStr[j] = word
+//       }
+//     }
+//   }
+
+//   return arrStr.join(" ");
+// }
+
+// const dictionary = ["cat","bat","rat"];
+// const sentence = "the cattle was rattled by the battery";
+// console.log(replaceWords(dictionary, sentence))
+
+
+// function countValidTriplets(A){
+//   let count = 0;
+//   for(let i = 0; i<A.length; i++){
+//     for(let j = i+1; j<A.length; j++){
+//       if(A.includes(A[i] + A[j])){
+//         console.log(A[i], A[j])
+//         count++;
+//       }
+//     }
+//   }
+//   return count;
+// }
+
+
+
+// const A = [1, 2, 3, 4, 5];
+// console.log(countValidTriplets(A)); 
+
+
+// function canAllPeopleSit(n, m, seats){
+//   let count = n;
+//   for(let i =1; i<m; i++){
+//     if(seats[i-1] == 0 && seats[i+1] == 0 && seats[i] == 1 || seats[i] == 1 && seats[i-1] == 0 && i == m-1 || seats[i] == 0 && seats[i-1] == 1 && i == 1){
+//       count--;
+//     }
+//   }
+
+//   if(count == 0){
+//     return "YES";
+//   }
+
+//   return "NO"
+// }
+
+
+
+// const n = 4;
+// const m = 7;
+// const seats = [1, 0, 1, 0, 1, 0, 1];
+// console.log(canAllPeopleSit(n, m, seats));
+
+
+
+// function isValid(str){
+
+//   const openBrackets = {
+//     '(': ')',
+//     '{': '}',
+//     '[': ']'
+// };
+
+//   let stack = [];
+//   for(let i =0 ; i<str.length; i++){
+//     let char = str[i];
+//     if(openBrackets[char]){
+//       stack.push(char);
+//     }else{
+//       let lastEle = stack.pop();
+//       if(openBrackets[lastEle] !== char){
+//         return false;
+//       }
+//     }
+    
+//   }
+
+
+//   return stack.length === 0;
+// }
+
+
+// console.log(isValid("()[]{}"));   
+// console.log(isValid("[([])]"));  
