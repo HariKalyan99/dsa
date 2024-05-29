@@ -468,16 +468,14 @@
 
 // function rearrangeString(str) {
 
-//       let vowels = "";
-//       let consonants = "";
+//     let vowels = 0; 
+      
 //       for(let i = 0; i<str.length; i++){
 //             if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
-//                   vowels+=str[i];
-//             }else{
-//                   consonants+=str[i];
+//                   vowels++
 //             }
 //       }
-//       return vowels.concat(consonants);
+//       return vowels
 // }
 // let inputString = "bcade";
 // let rearranged = rearrangeString(inputString);
@@ -2688,3 +2686,394 @@
 
 // console.log(isValid("()[]{}"));   
 // console.log(isValid("[([])]"));  
+
+
+// function pal(str){
+//     let i = 0;
+//     let j = str.length - 1;
+//     while(i < j){
+//         if(str[i] !== str[j]){
+//             return false;
+//         }
+//         i++;
+//         j--;
+//     }
+//     return true
+// }
+
+// console.log(pal("nittin"))
+
+
+// function numberArray(arr){
+//     let ans = [];
+//     for(let i = 0; i<arr.length; i++){
+//         if(typeof arr[i] == "number"){
+//             ans.push(arr[i])
+//         }    
+//     }
+//     return ans;
+// } 
+
+
+// console.log(numberArray(["a", 1 ,"b", 2 ,"c","d", 3 , 4 ,"e"]))
+
+// function longestCommonPrefix(arr){
+//     arr.sort((a,b) => a.length - b.length);
+//     let n = arr.length;
+//     let i = 0;
+//     let count = 0;
+//     while(i < arr[0].length){
+//         if(arr[n-1][i] == arr[0][i]){
+//             count++
+//         }
+//         i++
+//     }   
+
+//     let prefix = arr[0].substring(0, count);
+
+//     let ans = [];
+//     for(let i = 0; i<arr.length; i++){
+//         if(arr[i].includes(prefix)){
+//             ans.push(arr[i])
+//         }
+//     }
+    
+//     return ans[ans.length - 1]
+// }
+
+// console.log(longestCommonPrefix(["interstellar", "internet", "internal", "intercept", "termiunal"]))
+
+
+// function reverseStr(str){
+//     let rev = "";
+//     for(let i = str.length-1; i>=0; i--){
+//         rev+=str[i]
+//     }
+//     return rev;
+// }
+
+// console.log(reverseStr("apple"))
+
+
+// function removeIntegers(arr){
+//     let ans = []
+//     for(let i = 0; i<arr.length; i++){
+//         if(!Number.isInteger(arr[i])){
+//             ans.push(arr[i])
+//         }
+//     }
+//     return ans
+// }
+
+// console.log(removeIntegers([1, "apple", 2.5, 3, "banana"]))
+
+// function sortWord(word){
+//     return word.split("").sort().join("")
+// }
+
+
+// function groupAnagrams(arr){
+//     let n = arr.length;
+//     let ans = [];
+//     for(let i = 0; i<n; i++){
+//         ans.push(sortWord(arr[i]))
+//     }
+    
+//     let obj = {
+
+//     }
+
+//     for(let i = 0; i<n; i++){
+//         if(obj[ans[i]]){
+//             obj[ans[i]] = [...obj[ans[i]] ,ans[i]]
+//         }else{
+//             obj[ans[i]] = [arr[i]]
+//         }
+//     }
+
+//     return Object.values(obj)
+// }
+
+
+// console.log(groupAnagrams(["listen", "enlist", "google", "gooegl", "inlets", "banana"]))
+
+
+// function checkMagicSquare(n, matrix){
+//     let commonSum = 0;
+//     for(let i = 0; i<matrix[0].length; i++){
+//         commonSum+=matrix[0][i]
+//     }   
+
+    
+//     for(let i = 0; i<n; i++){
+//         let rowSum = 0;
+//         for(let j = 0; j<n; j++){
+//             rowSum+=matrix[i][j]
+//         }
+//         if(rowSum !== commonSum){
+//             return false
+//         }
+//     }
+
+//     for(let i = 0; i<n; i++){
+//         let colSum = 0;
+//         for(let j = 0; j<n; j++){
+//             colSum+=matrix[j][i]
+//         }
+//         if(colSum !== commonSum){
+//             return false
+//         }
+//     }
+
+//     let primaryDiagonal = 0;
+//     let secondaryDiagonal = 0;
+//     for(let i = 0; i<n; i++){
+//         primaryDiagonal+=matrix[i][i];
+//         secondaryDiagonal+=matrix[i][n-1-i];
+//     }   
+//     if(primaryDiagonal !== commonSum && secondaryDiagonal !== commonSum){
+//         return false;
+//     }
+
+//     return true
+// }
+
+// console.log(checkMagicSquare(4, [[4,14,15,1], [9,7,6,12], [5,11,10,8],[16,2,3,13]]))
+
+
+// function capitalize(str){
+//     let ans = "";
+//     let diff = 'a'.charCodeAt() - 'A'.charCodeAt()
+//     console.log(diff, 't'.charCodeAt() - 32, String.fromCharCode(84))
+
+//     for(let i = 0; i<str.length;  i++){
+//         if(i == 0 && str[i] !== "" || str[i] != "" && str[i-1] == " "){
+//             if(str[i] <= 'z' && str[i] >= 'a'){
+//                 ans+=String.fromCharCode(str[i].charCodeAt() - diff);
+//             }else{
+//                 ans+=str[i]
+//             }
+//         }else{
+//             ans+=str[i]
+//         }
+
+//     }
+
+//     return ans
+// }
+
+// console.log(capitalize('the quick Brown .... fox jumps over The lazy dog'))
+
+
+// function searchTarget(N, A, X){
+//     let start = 0;
+//     let end = N-1;
+//     while(start < end){
+//         let mid = Math.floor((start+end)/2);
+//         if(A[mid] < X){
+//             start = mid + 1;
+//         }else if(A[mid] > X){
+//             end = mid - 1;
+//         }else{
+//             return mid;
+//         }
+//     }
+
+//     return -1;
+
+// }
+
+// console.log(searchTarget(5, [1,3,5,7,13], 7))
+
+
+
+
+// function intersectionOfTwoArraysBasic(n, nums1, m , nums2){
+//     let arr = [];
+//     let map1 = new Map();
+//     for(let i = 0; i<n; i++){
+//         if(map1.has(nums1[i])){
+//             map1.set(nums1[i], map1.get(nums1[i]) + 1)
+//         }else{
+//             map1.set(nums1[i], 1);
+//         }
+//     }
+    
+//     for(let i = 0; i<m; i++){
+//         if(map1.has(nums2[i])){
+//             arr.push(nums2[i]);
+//             map1.set(nums2[i], map1.get(nums2[i]) - 1)
+//         }else{
+//             map1.set(nums2[i], 1)
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(intersectionOfTwoArraysBasic(4, [1,2,2,1], 3, [2,2,1]))
+
+
+// function rearrange(str){
+    
+// }
+
+// console.log(rearrange("abcdef"))
+
+// function solution(commands){
+//     let count = 0;
+//     for(let i = 0; i<commands.length; i++){
+//         if(commands[i] == "R"){
+//             count++;
+//         }else{
+//             count--
+//         }
+//     }
+    
+// }
+
+
+// console.log(solution("LLRRLLRRR"))
+
+// function increase(){
+
+// }
+
+
+
+// function solution(arr){
+//     let ans = [];
+//     for(let i = 0; i<arr.length-2; i++){
+//         if(arr[i]>arr[i+1]>arr[i+2] || arr[i] < arr[i+1] < arr[i+2]){
+//             console.log(arr[i], arr[i+1], arr[i+2])
+//             ans.push(1);
+//         }else{
+//             ans.push(0)
+//         }
+//     }
+//     return ans;
+// }
+
+// console.log(solution([1,2,1,-4,5,10]))
+
+// function swap(s) {
+//     let reverseStr = "";
+//     for(let i = s.length - 1; i>=0;i--){
+//         reverseStr+=s[i];
+//     }
+//     return reverseStr;
+// }
+
+// function solution(str){
+//     let ans = "";
+//     for(let i = 0; i<str.length-1; i+=2){
+//         ans+=(swap(str[i]+str[i+1]))
+//     }
+//     if(str.length%2 !== 0){
+//         return ans.concat(str[str.length-1])
+//     }
+//     return ans
+    
+// }
+
+// console.log(solution("badcfe"))
+
+
+// const vowelCount = (str) => {
+//     let count = 0;
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+//             count++;
+//         }
+//     }
+//     return count;
+// } 
+
+// console.log(vowelCount("hello"))
+
+
+// function solution(str){
+//     let ans = "";
+//     let s = 0;
+//     let e = str.length - 1;
+//     while(s < e){
+//         ans+=str[s]+str[e];
+//         s++;
+//         e--;
+//     }
+//     if(str.length%2 !== 0){
+//         return ans+(str[Math.floor(str.length/2)])
+//     }
+//     return ans;
+// }   
+
+
+// console.log(solution("abcde"))
+
+
+// function checkInc(arr){
+//     for(let i = 2; i<arr.length; i+=2){
+//         if(arr[i-2] >=arr[i]){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// function checkDec(arr){
+//     for(let i = 2; i<arr.length; i+=2){
+//         if(arr[i-2] <= arr[i]){
+//             return false;
+//         }
+//     }
+//     return true
+// }
+
+
+
+// function solution(num){
+//     if(checkInc(num)){
+//         return 'increasing'
+//     }else if(checkDec(num)){
+//         return 'decreasing'
+//     }
+//     return "none"
+    
+// }
+
+// console.log(solution([15, 65, 20, 72, 12, 72]))
+
+
+// function solution(str){
+//     let countL = 0;
+//     let countR = 0;
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] == "L"){
+//             countL++;
+//         }else{
+//             countR++;
+//         }
+//     }
+
+//     return countL > countR ? "L" : countL < countR ? "R" : `""`
+// }   
+
+// console.log(solution("LRLRR"))
+
+// function solution(arr){
+//     let ans = [];
+//     for(let i = 0; i<arr.length-2; i++){
+//         if(arr[i] < arr[i+1] && arr[i+1] < arr[i+2] || arr[i] > arr[i+1] && arr[i+1] > arr[i+2]){
+//             console.log(arr[i], arr[i+1], arr[i+2])
+//             ans.push(1)
+//         }else{
+//             ans.push(0)
+//         }
+//     }
+//     return ans
+// }
+
+// console.log(solution([1,2,1,-4,5,10]))
+
+
+
