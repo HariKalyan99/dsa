@@ -3076,4 +3076,82 @@
 // console.log(solution([1,2,1,-4,5,10]))
 
 
+// function hasUniqueCharecters(str){
+//     let map = new Map();
+//     for(let i = 0; i<str.length; i++){
+//         if(map.has(str[i])){
+//             map.set(str[i], map.get(str[i]) + 1)
+//         }else{
+//             map.set(str[i], 1)
+//         }
+//     }
 
+//     for(let [key, value] of map){
+//         if(value > 1){
+//             return false
+//         }
+//     }
+
+//     return true
+// }
+
+// console.log(hasUniqueCharecters("helo"))
+
+
+// function checkInc(arr){
+//     for(let i = 2; i<=arr.length-1; i+=2){
+//         if(arr[i-2] > arr[i]){
+//             return false
+//         }
+//     }
+
+//     return true;
+// }
+
+
+// function checkDec(arr){
+//     for(let i = 2; i<=arr.length-1; i+=2){
+//         if(arr[i-2] < arr[i]){
+//             return false
+//         }
+//     }
+
+//     return true;
+// }
+
+
+// function orderOfAliens(arr){
+//     if(checkInc(arr)){
+//         return "increasing"
+//     }else if(checkDec(arr)){
+//         return "decreasing"
+//     }
+//     return "none"
+// }
+
+// console.log(orderOfAliens([2,3,1,4,2]))
+
+
+// function subsequence(str){
+//     let i = 0; 
+//     let count = 0;
+//     let max = 0;
+//     while(i < str.length){
+//         if(str[i] == '1'){
+//             count++
+//         }else if(str[i] == '0'){
+//             count = 0
+//         }
+//         i++;
+//         max = Math.max(max, count);
+//     }
+//     return max;
+// }
+
+// console.log(subsequence("11001010111111"))
+
+// function concatinate(arr, delimiter){
+//     return arr.join(`${delimiter}`)
+// }
+
+// console.log(concatinate(["apple", "banana", "orange"], "-"))
