@@ -3155,3 +3155,181 @@
 // }
 
 // console.log(concatinate(["apple", "banana", "orange"], "-"))
+
+// function findOne(arr){
+//     let l = 0;
+//     let r = arr.length - 1;
+//     let res = -1;
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2);
+//         if(arr[mid] == 0){
+//             l = mid + 1;
+//         }else{
+//             r = mid - 1;
+//             res = mid;
+//         }
+//     }
+
+//     return res
+// }
+
+// console.log(findOne([0,0,0,1,1,1]))
+
+
+
+
+// function findOne(arr){
+//     let l = 0;
+//     let r = arr.length - 1;
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2);
+//         if(arr[mid] == 0){
+//             if(1 !== arr[mid - 1]){
+//                 return mid;
+//             }else{
+//                 r = mid - 1;
+//             }
+//         }else if(arr[mid] < 1){
+//             l = mid + 1;
+//         }else{
+//             r = mid - 1;
+//         }
+//     }
+
+//     return -1
+// }
+
+// console.log(findOne([0,0,0,1,1,1]))
+
+
+// function rotatedSorted(arr){
+//     let l = 0;
+//     let r = arr.length - 1;
+//     let start = 0;
+
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2); // 3
+//         if(arr[mid] < arr[mid-1] && arr[mid] > arr[mid+1]){
+//             start = mid;
+//         }else if(arr[mid] > arr[l]){
+//             l = mid + 1 // 4
+//         }else if(arr[mid] < arr[l]){
+//             r = mid - 1;
+//         }
+//     }
+    
+//     console.log(start, l, r)
+// }
+
+
+// console.log(rotatedSorted([4,5,6,7,8,9,1,2,3]))
+// function calculateTime(arr, mid){
+//     let time = 0;
+//     for(let n of arr){
+//         time+=Math.ceil((n/mid))
+//     }
+
+//     return time;
+// }
+
+
+// function bookReading(arr, h){ // o(n log max);
+//     let l = 0;
+//     let r = Math.max(...arr); //or 10^9 => 1000000000
+//     let ans = r;
+
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2);
+//         let time = calculateTime(arr, mid)
+//         if(time <= h){
+//             ans = mid;
+//             r = mid - 1;
+//         }else{
+//             l = mid + 1;
+//         }
+//     }
+
+//     return ans;
+// }
+
+// console.log(bookReading([3,6,7,11], 8))
+
+// function findLessOrEqualInRow(arr, mid){
+//     let count = 0;
+//     for(let col = 0; col<arr.length; col++){
+//         if(arr[col] > mid){
+//             break
+//         }else{
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+
+// function countOfElementsLessOrEqual(matrix, mid){
+//     let n = matrix.length;
+//     let count = 0;
+//     for(let row = 0; row<n; row++){
+//         if(matrix[row][0] > mid){
+//             break;
+//         }else if(matrix[row][n-1] < mid){
+//             count += n;
+//         }else{
+//             count += findLessOrEqualInRow(matrix[row], mid);
+//         }
+//     }
+//     return count;
+// }
+
+
+// function kthSmallestElement(matrix, k){
+//     let n = matrix.length;
+//     let l = matrix[0][0];
+//     let r = matrix[n-1][n-1];
+//     let ans = r;
+
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2); // 8, 12, 14, 13
+//         let count = countOfElementsLessOrEqual(matrix, mid); //8(<arr>) => 2 != k, 12(<arr>) => 6 != k, 14(<arr>) => 8 != k, 13(<arr>) => 8 != k,
+//         if(count == k){
+//             ans = mid;
+//             r = mid - 1; // 13, 12
+//         }else if(count < k){
+//             l = mid + 1; // 9, 13,
+//         }else if(count > k){
+//             ans = mid;
+//             r = mid - 1;
+//         }
+
+//     }
+//     return ans;
+// }
+
+// console.log(kthSmallestElement([[1,5,9],[10,11,13], [12,13,15]], 8))
+
+
+
+// function diffBetweenSumLeftRight(arr){
+//     let ans = [];
+//     let sum = 0;
+//     let sum2 = 0; 
+//     for(let i = 0; i<arr.length; i++){
+//         sum = 0
+//         for(let j = i+1; j<arr.length; j++){
+//             sum+=arr[j]
+//         }
+//         sum2 = 0;
+//         for(let j = 0; j<i; j++){
+//             sum2+=arr[j]
+//         }
+//         ans.push(Math.abs(sum-sum2))
+//     }
+//     return ans;
+// }
+// console.log(diffBetweenSumLeftRight([1,2,3,4,10]))
+
+
+
+
