@@ -3329,7 +3329,98 @@
 //     return ans;
 // }
 // console.log(diffBetweenSumLeftRight([1,2,3,4,10]))
+// function checkerFn(arr, n, mid){
+//     let ans = [];
+//     let sum = 0;
+//     for(let i = 0; i<n; i++){
+//         ans[i] = Math.floor(Math.sqrt(mid/arr[i]));
+//     }
+//     for(let i = 0; i<n; i++){
+//         sum+=ans[i]
+//     }
+//     return sum;
+// }
 
 
 
+// function profitSearch(arr, n, order){
+//     let l = 0;
+//     let r = 1000000000;
+//     let res = 0
+//     while(l <= r){
+//         let mid = Math.floor((l+r)/2);
+//         console.log(mid)
+//         let pTime = checkerFn(arr, n, mid);
+//         console.log("P", pTime)
+//         if(pTime >= order){
+//             res = mid;
+//             r = mid - 100;
+//         }else if(pTime < order){
+//             l = mid + 100;
+//         }
+//     }
+//     return res;
+// }
+// // l = 100
+// // r = 400
+// // mid = 250, 125 , 62, 31, 15, 115 - 69/2 = 23 // 115 - 77 = 38/2 = 19, 115-81 // 17
+// //ptime = 42, 29,19,13,8,11
+// // ptime > 10 r = mid - 1 // r = 250-100 = 150 // r = 125 - 100 = 25 // r = 62 - 100 = -38 // r = 31 - 100 = -69 // 23 - 100 = -77 // 19 - 100 = -81 // 17 - 100 = -83
+// //ptimw < 10 l = mid + 1 // 15 + 100 = 115 
+// console.log(profitSearch([1,2,3,4], 4, 10))
 
+
+// function manipulate(str1, str2){
+//     if(str1.length != str2.length){
+//         return false
+//     }
+    
+//     let len = 0;
+//     str1.length > str2.length ? len = str1.length : len = str2.length;
+//     let count = 0;
+
+//     for(let i =0; i<len; i++){
+//         if(str1[i] !== str2[i]){
+//             count++;
+//         }
+//     }
+
+//     return count == 0
+// }
+
+// console.log(manipulate("heloaa", "heloaa"))    
+
+
+
+// function minPosValue(arr){
+//     let prefixSum = new Array(arr.length);
+//     prefixSum[0] = arr[0];
+//     for(let i =1 ; i<arr.length; i++){
+//         prefixSum[i] = prefixSum[i-1] + arr[i]
+//     }
+//     let minVal = Math.min(...prefixSum);
+//     return Math.abs(minVal);
+// }
+
+// console.log(minPosValue([-4,2,-3,2,6]))
+
+
+// function wiggleSort(arr, n){
+//     for(let i = 1; i<n; i+=2){
+//         if(arr[i] < arr[i-1]){
+//             let temp = arr[i];
+//             arr[i] = arr[i-1];
+//             arr[i-1] = temp;
+//         }
+
+//         if(i+1 && arr[i] < arr[i+1]){
+//             let temp = arr[i];
+//             arr[i] = arr[i+1];
+//             arr[i+1] = temp;
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(wiggleSort([1,5,1,1,6,4], 6))
