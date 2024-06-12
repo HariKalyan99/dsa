@@ -3424,3 +3424,60 @@
 // }
 
 // console.log(wiggleSort([1,5,1,1,6,4], 6))
+
+
+// function findDuplicates(arr, n){
+//     // const set = new Set();
+//     let ans = []
+//     // for(let i = 0; i<n; i++){
+//     //     if(set.has(arr[i])){
+//     //         ans.push(arr[i])
+//     //     }else{
+//     //         set.add(arr[i])
+//     //     }
+//     // }
+//     // return ans;
+
+//     let map = new Map();
+//     for(let i = 0; i<n; i++){
+//         if(map.has(arr[i])){
+//             ans.push(arr[i])
+//         }else{
+//             map.set(arr[i], i)
+//         }
+//     }
+//     return ans
+// }
+
+// console.log(findDuplicates([4,3,2,7,8,2,3,1], 8))
+
+
+// function removeDuplicates(arr){
+//     let set = [...new Set(arr)];
+//     return set;
+// }
+
+// console.log(removeDuplicates([1,1,2]))
+
+// function repeatedSubStringPattern(s){
+//     let n = s.length;
+//     for(let i = 1; i<=n/2; i++){
+//         let sub = s.substring(0, i);
+//         if(sub.repeat(n/i) === s){
+//             return n/i
+//         }
+//     }
+//     return 1;
+// }
+
+// console.log(repeatedSubStringPattern("abcabc"))
+
+function firstIndexOfStr(haystack, needle){
+    for(let i = 0; i<=haystack.length - needle.length; i++){
+        if(haystack.substr(i, needle.length) === needle){
+            return i;
+        }
+    }
+    return -1;
+}
+console.log(firstIndexOfStr("sadbutsad", "sad"))
