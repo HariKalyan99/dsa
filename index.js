@@ -3472,12 +3472,130 @@
 
 // console.log(repeatedSubStringPattern("abcabc"))
 
-function firstIndexOfStr(haystack, needle){
-    for(let i = 0; i<=haystack.length - needle.length; i++){
-        if(haystack.substr(i, needle.length) === needle){
-            return i;
-        }
-    }
-    return -1;
-}
-console.log(firstIndexOfStr("sadbutsad", "sad"))
+// function firstIndexOfStr(haystack, needle){
+//     for(let i = 0; i<=haystack.length - needle.length; i++){
+//         if(haystack.substr(i, needle.length) === needle){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// console.log(firstIndexOfStr("sadbutsad", "sad"))
+
+
+// function repeatedSubstringPattern(str){
+//     let n = str.length;
+//     for(let i = 1 ; i<=n/2; i++){
+//         let sub = str.substring(0, i);
+//         if(sub.repeat(n/i) === str){
+//             return n/i
+//         }
+//     }
+//     return 1;
+// }
+
+// console.log(repeatedSubstringPattern("abcabc")); // Output: 2
+// console.log(repeatedSubstringPattern("cccc"));   // Output: 4
+
+
+
+// function findNextNumber(input){
+//     let res = "";
+//     let count = 1;
+//     let n = input.length;
+//     for(let i = 0; i<n; i++){
+//         if(input[i] === input[i+1]){
+//             count++;
+//         }else{
+//             res+=count+input[i]
+//             count = 1;
+//         }
+//     }
+//     return res;
+// }
+
+
+// const input = '1124';
+// console.log(findNextNumber(input));
+
+// function convertTime(num){
+//     let hours = Math.floor(num/60);
+//     let min = num%60;
+//     return `${hours}:${min}`
+// }
+
+// console.log(convertTime(124))
+// function isSubstring(str, ogStr){
+//     console.log(str, ogStr)
+//     return str.includes(ogStr)
+// }
+
+
+// function repeatedStringMatch(a, b){
+//     let count = 1;
+//     for(let i = 1; i<=b.length; i++){
+//         if(isSubstring(a.repeat(i), b)){
+//             return count
+//         }else{
+//             count++;
+//         }
+//     }
+//     return -1;
+// }
+
+// console.log(repeatedStringMatch("abcd", "cdabcdab"))
+
+
+
+// function largestSum(arr){
+//     arr.sort((a,b) => {
+//         console.log((b+""+a) - (a+""+b))
+//         return (b+""+a) - (a+""+b)
+//     });
+//     return arr.join('')
+// }
+
+// console.log(largestSum([3,30,34,5,9]))
+
+// function happyNumber(n){
+//     let seen = new Set();
+
+//     while(n !== 1){
+//         n = String(n).split('').reduce((sum, digit) => sum + Math.pow(parseInt(digit), 2), 0);
+        
+//         if(seen.has(n)){
+//             return false
+//         }
+//         seen.add(n)
+//     }
+
+//     console.log(seen)
+//     return  true;
+// }
+
+// console.log(happyNumber(19))
+
+// function searchingChallenge(str){
+    
+//     let stack = [];
+//     for(let i = 0; i<str.length; i++){
+//         let char =  str[i];
+//         if(char === '('){
+//             stack.push(char)
+//         }else if(char === ')'){
+//             if(stack.length === 0){
+//                 return 0;
+//             }
+//             stack.pop()
+//         }
+//     }
+//     return stack.length === 0 ? 1 : 0;
+// }
+
+
+
+
+// console.log(searchingChallenge("(hello (world)[c])")); // Output: 1
+// console.log(searchingChallenge("((hello (world))")); // Output: 0
+// console.log(searchingChallenge("(hello)(world))")); // Output: 0
+// console.log(searchingChallenge("(h(ello)) w(orld)"));
