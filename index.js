@@ -468,8 +468,8 @@
 
 // function rearrangeString(str) {
 
-//     let vowels = 0; 
-      
+//     let vowels = 0;
+
 //       for(let i = 0; i<str.length; i++){
 //             if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
 //                   vowels++
@@ -518,9 +518,7 @@
 // pattern(4);
 // console.log(1%2)
 
-
 // encoded string
-
 
 // function decodeStr(str) {
 //       let result = "";
@@ -549,9 +547,7 @@
 //             }
 //       }
 //             return result;
-      
-            
-      
+
 // }
 
 // console.log(decodeStr("3[a2[bc]]"))
@@ -567,20 +563,14 @@
 
 // console.log(remix("abcd", [0, 3, 1, 2]));
 
-
-
-// 3) You are given a string S, and a list of words L i.e array/vector of strings (Words in list L are all of the same length). Find the starting indices of the substrings in string S, which contains all the words present in list L. The order of words of list L appearing inside string S does not matter i.e if string S is “barfooapplefoobar” and list of words (L) is [“foo”, “bar”] then we have to look for substrings “foobar”, “barfoo” in string S. Note : Words inside the list L can repeat. 
+// 3) You are given a string S, and a list of words L i.e array/vector of strings (Words in list L are all of the same length). Find the starting indices of the substrings in string S, which contains all the words present in list L. The order of words of list L appearing inside string S does not matter i.e if string S is “barfooapplefoobar” and list of words (L) is [“foo”, “bar”] then we have to look for substrings “foobar”, “barfoo” in string S. Note : Words inside the list L can repeat.
 
 // // Example usage:
-// const S = "barfooapplefoobar";  
+// const S = "barfooapplefoobar";
 // const L = ["foo", "bar"];
 // console.log(findSubstringIndices(S, L));   //Output: [0,11]
 // let ans = S.includes("barfoo")
 // console.log(S.substring(0, L[0].length*L.length))
-
-
-
-
 
 // function findSubstringIndices(S, L) {
 //     let wordLength = L[0].length;
@@ -607,17 +597,14 @@
 //       return indices;
 // }
 
-
-
-
-// const S = "barfooapplefoobar";  
+// const S = "barfooapplefoobar";
 // const L = ["foo", "bar"];
-// console.log(findSubstringIndices(S, L)); 
+// console.log(findSubstringIndices(S, L));
 
 // function decodeString(str){
 //       let result = "";
 //       for(let i = 0; i<str.length; i++){
-            
+
 //             if(str[i] !== "]"){
 //                   result+=str[i]
 //             }else{
@@ -648,7 +635,6 @@
 
 // console.log(decodeString("3[a2[bc]]"))
 
-
 // function allVowelsAtStart(str){
 //       let vowels = "";
 //       let consonants = "";
@@ -665,9 +651,8 @@
 // }
 // console.log(allVowelsAtStart("bcade"))
 
-
 // function ipAddress(ip){
-      
+
 //       let ips = [];
 //       if(ip.length === 10){
 //             ips.push(`${ip.slice(0, 3)}.${ip.slice(3, 7)}.${ip.slice(7)}`);                       ips.push(`${ip.slice(0, 3)}.${ip.slice(3, 6)}.${ip.slice(6)}`);
@@ -689,9 +674,8 @@
 //                   start = 1 - start;
 //             }
 //             console.log(row);
-//       }   
+//       }
 
-      
 // }
 
 // console.log(pattern(4))
@@ -731,7 +715,6 @@
 
 // console.log(star('*'))
 
-
 // function numPattern(n){
 //       for(let i = n; i>=1; i--){
 //             let num = i;
@@ -747,7 +730,6 @@
 // }
 
 // console.log(numPattern(5))
-
 
 // function trianglePattern(s){
 //       let n = 5;
@@ -772,7 +754,6 @@
 
 // console.log(0%2)
 
-
 // function maxProfit(money, buyPrices, sellPrices){
 //      let maxProfit = 0;
 //       for(let i = 0; i<buyPrices.length; i++){
@@ -785,7 +766,6 @@
 // }
 
 // console.log(maxProfit(20, [5, 10,2], [2,1,10]))
-
 
 // function maxProfitOfStock(prices){
 //       let minPrice = Infinity;
@@ -800,7 +780,6 @@
 // }
 
 // console.log(maxProfitOfStock([7,1,5,3,6,4]))
-
 
 // function kadaneAlgo(nums){
 //       let currentSum = nums[0];
@@ -820,8 +799,7 @@
 // let arr = [12,10,14];
 // let k = 3;
 // let result = minimizeSumAfterOperations(arr, k);
-// console.log("Minimized sum after", k, "operations:", result);  
-
+// console.log("Minimized sum after", k, "operations:", result);
 
 // function minimizeSumAfterOperations(arr, k){
 //       arr.sort((a,b) => a - b)
@@ -831,10 +809,8 @@
 //             insertInSortedOrder(arr, newEle);
 //       }
 
-
 //       return arr.reduce((acc, initial) => acc+initial, 0)
 // }
-
 
 // function insertInSortedOrder(arr, newEle){
 //       // console.log(arr, newEle)
@@ -846,9 +822,6 @@
 //       arr.splice(i, 0, newEle)
 //       console.log(arr)
 // }
-
-
-
 
 // function formTwoNumbers(arr){
 //       let num1 = 0;
@@ -870,15 +843,13 @@
 
 // function root(dictionary, sentence){
 //       let str = sentence.split(" ");
-  
+
 //       for(let i = 0; i<str.length; i++){
 //             let word = str[i];
 //             for(let j = 0; j<dictionary.length; j++){
 //                   if(dictionary[j] === word.substr(0, dictionary[j].length)){
 //             str[i] = word.substr(0, dictionary[j].length);
-                        
-                        
-                        
+
 //                   }
 //             }
 //       }
@@ -918,14 +889,13 @@
 
 // console.log(countValidTriplet([1,2,3,4,5]))
 
-
 // function canAllPeopleSit(n, m, seats){
 //       let count = n;
 //       for(let i = 0; i<=m-1; i++){
 //             if(i == 0 && seats[i] == 1 && seats[i+1] !== 1 || seats[i] == 1 && seats[i-1] !== 1 && seats[i+1] !== 1){
 //                   count > 0 ? count-- : count = 0
 //             }
-            
+
 //       }
 //       if(count == 0){
 //             return true;
@@ -933,12 +903,9 @@
 //             return false;
 //       }
 
-
-      
 // }
 
 // console.log(canAllPeopleSit(2, 7, [0,0,1,0,1,0,0]))
-
 
 // function isValidBrackets(s){
 //       let stack = [];
@@ -964,9 +931,7 @@
 //       return stack.length === 0;
 // }
 
-
 // console.log(isValidBrackets("{()}[]"))
-
 
 // function rotateImage(matrix, n){
 //   for(let i = 0; i<n; i++){
@@ -1025,7 +990,7 @@
 //     for(let i = bottom; i>=top; i--){
 //       matrix[i][left] = count++;
 //     }
-//     left++ //0- 1 
+//     left++ //0- 1
 //   }
 //   console.log(matrix)
 // }
@@ -1051,7 +1016,6 @@
 // console.log(incrementNumber(3, [9,9,9]))
 
 // console.log(Number([9,9,9].join("")) + 1)
-
 
 // function makeZeros(matrix){
 //   let n = matrix.length;
@@ -1084,9 +1048,8 @@
 //   })
 
 //   console.log(matrix)
-  
-// }
 
+// }
 
 // function convertZero(arr){
 //   for(let i =0; i<arr.length; i++){
@@ -1110,7 +1073,6 @@
 // }
 
 // console.log(reverseString("hello world friends"))
-
 
 // function searchTarget(A, X, N){
 //   let i = 0;
@@ -1143,7 +1105,6 @@
 
 // console.log(buyStocks([7,1 ,5 ,3, 6,4], 6))
 
-
 // function decodeString(str){
 //   let result = "";
 //   for(let i = 0; i<str.length; i++){
@@ -1168,14 +1129,13 @@
 //       while(intNum--){
 //         result+=temp;
 //       }
-      
+
 //     }
 //   }
 //   return result;
 // }
 
 // console.log(decodeString("3[a2[bc]]"))
-
 
 // console.log("hello".slice(0, -1))
 
@@ -1188,7 +1148,6 @@
 //   return ans.join("")
 // }
 // console.log(remix("abcd", [0, 3, 1, 2]));
-
 
 // function findSubstringIndices(S, L){
 //   let listLength = L.length;
@@ -1205,13 +1164,11 @@
 //   return ans
 // }
 
-
-// const S = "barfooapplefoobar";  
+// const S = "barfooapplefoobar";
 // const L = ["foo", "bar"];
-// console.log(findSubstringIndices(S, L)); 
+// console.log(findSubstringIndices(S, L));
 
 // console.log(L.join("").split("").sort().join(""))
-
 
 // function rearrangeString(str){
 //   let vowels = "";
@@ -1238,11 +1195,9 @@
 //   return result
 // }
 
-
 // let inputString = '1234878012';
 // let ipAddresses = generateIPAddresses(inputString);
 // console.log(ipAddresses)
-
 
 // function pattern(n){
 //   let start = 1;
@@ -1289,7 +1244,6 @@
 //     }
 // }
 
-
 // console.log(pattern("*"))
 
 // for(let i = 5; i>=0; i--){
@@ -1313,7 +1267,6 @@
 //     }
 //     ch = String.fromCharCode(ch.charCodeAt(0) - 2)
 
-
 //     for(let j = 0; j<i; j++){
 //       result+=ch;
 //       ch = String.fromCharCode(ch.charCodeAt(0) - 1)
@@ -1321,7 +1274,7 @@
 //     result+= '\n'
 //   }
 //   console.log(result)
-  
+
 // }
 
 // console.log(printPattern(4))
@@ -1342,12 +1295,11 @@
 // let sellPrices = [2, 10, 10];
 // console.log(maxProfit(money, buyPrices, sellPrices));
 
-
 // function maxProfit(prices){
 //   let minPrice = Infinity;
-  
+
 //   let maxProfit = 0;
-  
+
 //   for(let i = 0; i<prices.length; i++){
 //     minPrice =  Math.min(minPrice, prices[i]);
 //     maxProfit = Math.max(maxProfit, prices[i] - minPrice);
@@ -1356,10 +1308,8 @@
 //   return maxProfit
 // }
 
-
 // let prices = [7, 1, 5, 3, 6, 4];
-// console.log(maxProfit(prices)); 
-
+// console.log(maxProfit(prices));
 
 // function maxSubarraySum(A){
 //   let currentSum = A[0];
@@ -1367,17 +1317,13 @@
 //   for(let i = 1; i<A.length; i++){
 //     currentSum = Math.max(A[i] + currentSum, A[i]);
 //     maxSum = Math.max(currentSum, maxSum);
-    
+
 //   }
 //   return maxSum
 // }
 
-
-
 // let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 // console.log(maxSubarraySum(nums))
-
-
 
 // function minimizeSumAfterOperations(arr, k){
 //   arr.sort((a,b) => a - b);
@@ -1390,14 +1336,13 @@
 //   return arr.reduce((acc, inital) => acc + inital, 0);
 // }
 
-
 // function insertInSortedOrder(arr, smallestInt) {
 //   let i = 0;
 //   while(i < arr.length && arr[i] < smallestInt){
 //     i++;
 //   }
 //   arr.splice(0, i, smallestInt)
-  
+
 // }
 
 // let arr = [12,10,14];
@@ -1410,7 +1355,6 @@
 //   let prevOneCount = 1;
 //   if(N === 1) return 2;
 
-  
 //   for(let i = 2; i<=N; i++){
 //     let currentZeroCount = prevZeroCount + prevOneCount;
 //     let currentOneCount = prevZeroCount;
@@ -1420,7 +1364,7 @@
 //   }
 
 //   return prevOneCount+prevZeroCount;
-  
+
 // }
 
 // console.log(countBinaryString(3))
@@ -1429,11 +1373,11 @@
 //   A.sort((a,b) => a - b);
 //   let min1 = 0;
 //   let min2 = 0;
-  
+
 //   for(let i = 0; i<N; i++){
 //     if(i%2 == 0){
 //       min1 = min1*10 + A[i];
-      
+
 //     }else{
 //       min2 = min2 *10+A[i];
 //     }
@@ -1443,7 +1387,6 @@
 // }
 
 // console.log( minSumOfTwoNumbers(6, [6, 8, 4, 5, 2, 3]))
-
 
 // function replaceWords(D, S){
 //   let strArr = S.split(" ");
@@ -1489,8 +1432,6 @@
 //   return arr;
 // }
 
-
-
 // const A = [1, 2, 2, 4, 5];
 // console.log(countValidTriplets(A));
 
@@ -1513,7 +1454,6 @@
 // const seats = [0, 0, 1, 0, 0, 0, 1];
 // console.log(canAllPeopleSit(n, m, seats));
 
-
 // function isValid(str){
 //   let brackets = {
 //     "{": "}",
@@ -1534,8 +1474,7 @@
 //     return stack.length === 0;
 // }
 
-
-// console.log(isValid("[(){}]")); 
+// console.log(isValid("[(){}]"));
 // console.log(isValid("(]"))
 
 // function pal(str){
@@ -1552,8 +1491,6 @@
 // }
 
 // console.log(pal("river"))
-
-
 
 // function makeZeros(matrix){
 //   let colLength = matrix.length;
@@ -1585,10 +1522,7 @@
 //   console.log(matrix)
 // }
 
-
-
 // console.log(makeZeros([[0,1,0], [0,0,0], [0,0,0]]))
-
 
 // function incrementNumber(N, A){
 //   A.reverse();
@@ -1607,7 +1541,6 @@
 
 // console.log(incrementNumber(3, [1,1,1]))
 
-
 // function findIntersection(A, N){
 //   let prefixSum = new Array(N)
 //   let suffixSum = new Array(N);
@@ -1616,7 +1549,6 @@
 //   for(let i = 1; i<=N-1; i++){
 //     prefixSum[i] = prefixSum[i-1] + A[i]
 //   }
-  
 
 //   suffixSum[N-1] = A[N-1];
 //   for(let j = N-2; j>=0; j--){
@@ -1663,8 +1595,6 @@
 
 // console.log(longestSubstring("Xyyzya", 3))
 
-
-
 // function subarraySumZero(n, arr){
 //   let set = new Set();
 //   let sum = 0;
@@ -1675,16 +1605,13 @@
 //     }else{
 //       set.add(sum);
 //     }
-  
+
 //   }
 
 //   return "No";
 // }
 
-
 // console.log(subarraySumZero(4, [4,5,-5,5]))
-
-
 
 // function largestSubarrayWithZero(n, arr){
 //   let prefixSum = new Array(n);
@@ -1731,8 +1658,6 @@
 // }
 
 // console.log(largestSubarrayWithZero(6, [2,3,1,-4,0,6]))
-
-
 
 // function largestSumContiguousSubArr(n, arr) {
 //   let currentSum = arr[0];
@@ -1902,7 +1827,6 @@
 
 // }
 
-
 // console.log(pal("racecar"))
 
 // function longestCommonPrefix(arr){
@@ -1921,7 +1845,7 @@
 //       arr1.push(arr[i]);
 //     }
 //   }
-  
+
 //   return [arr1[arr1.length-1]];
 // }
 
@@ -1931,7 +1855,6 @@
 //   return word.split("").sort().join("");
 // }
 
-
 // function groupAnagrams(arr){
 //   let n = arr.length
 //   let ans = []
@@ -1939,8 +1862,6 @@
 //     let sortedWord = sortWords(arr[i]);
 //     ans.push(sortedWord);
 //   }
-
-  
 
 //   let obj = {
 //   }
@@ -1951,7 +1872,7 @@
 //       obj[ans[i]] = [arr[i]]
 //     }
 //   }
-  
+
 //   return Object.values(obj)
 // }
 
@@ -1962,7 +1883,7 @@
 //     return 0;
 //   }
 
-//   return naturalSum(n-1)+n 
+//   return naturalSum(n-1)+n
 // }
 
 // console.log(naturalSum(5))
@@ -1982,7 +1903,6 @@
 //   return vowels.concat(consonants)
 // }
 // console.log(rearrangeStr("bcade"))
-
 
 // function kadaneAlgo(arr){
 //   let currentSum = arr[0];
@@ -2010,7 +1930,6 @@
 //   }
 // }
 // console.log(pattern(4))
-
 
 // function decodeStr(str){
 //   let n = str.length;
@@ -2046,8 +1965,6 @@
 
 // console.log(decodeStr("3[a2[bc]]"))
 
-
-
 // function remix(str, arr){
 //   let ans = [];
 //   for(let i = 0; i<arr.length; i++){
@@ -2070,7 +1987,7 @@
 //     if(sortedList == sortedWord){
 //       arr.push(i)
 //     }
-  
+
 //   }
 //   return arr
 // }
@@ -2078,7 +1995,6 @@
 // const S = "barfooapplefoobar";
 // const L = ["foo", "bar"];
 // console.log(findSubstringIndices(S, L));
-
 
 // function ipAddress(ip){
 //   let ips = [];
@@ -2089,7 +2005,6 @@
 // }
 
 // console.log(ipAddress("1234878012"))
-
 
 // function pattern(n){
 //   let start = 1;
@@ -2116,7 +2031,6 @@
 //   }
 //   return row;
 // }
-
 
 // console.log(star("*"))
 
@@ -2159,11 +2073,10 @@
 //     j++;
 //   }
 //   return maxProfit;
-  
+
 // }
 
 // console.log(maxProfit(20, [5,1,2], [2,10,10]))
-
 
 // function minimizeSumAfterOperations(arr, k){
 //   arr.sort((a,b) => a - b);
@@ -2188,8 +2101,7 @@
 // let arr = [12,10,14];
 // let k = 3;
 // let result = minimizeSumAfterOperations(arr, k);
-// console.log("Minimized sum after", k, "operations:", result);  
-
+// console.log("Minimized sum after", k, "operations:", result);
 
 // function countBinaryStrings(N){
 //   let prevZeroCount = 1;
@@ -2198,7 +2110,7 @@
 //   if(N == 1){
 //     return 2;
 //   }
-  
+
 //   for(let i = 2; i<=N; i++){
 //     let currentZeroCount = prevZeroCount+prevOneCount;
 //     let currentOneCount = prevZeroCount;
@@ -2211,7 +2123,6 @@
 // }
 
 // console.log(countBinaryStrings(3))
-
 
 // function minSumOfTwoNumbers(N, arr){
 //   arr.sort((a, b) => a - b);
@@ -2226,7 +2137,6 @@
 
 //   return Number(num1) + (Number(num2))
 // }
-
 
 // const N = 6;
 // const Arr = [6, 8, 4, 5, 2, 3];
@@ -2251,7 +2161,6 @@
 // const sentence = "the cattle was rattled by the rattled";
 // console.log(replaceWords(dictionary, sentence));
 
-
 // function countValidTriplets(A){
 //   let n = A.length;
 //   let count = 0;
@@ -2265,7 +2174,6 @@
 
 //   return count;
 // }
-
 
 // const A = [1, 2, 3, 4, 5];
 // console.log(countValidTriplets(A));
@@ -2284,12 +2192,10 @@
 
 // }
 
-
 // const n = 3;
 // const m = 7;
 // const seats = [0, 0, 1, 0, 1, 0, 1];
 // console.log(canAllPeopleSit(n, m, seats));
-
 
 // function isValid(str){
 //   let stack = [];
@@ -2315,10 +2221,8 @@
 //   return stack.length === 0
 // }
 
-
 // console.log(isValid("()[]{}"));   // Output: true
 // console.log(isValid("(]"));       // Output: false
-
 
 //practice
 
@@ -2362,11 +2266,7 @@
 //   return arr
 // }
 
-
-
-
 // console.log(remix("abcd", [0, 3, 1, 2]));
-
 
 // function findSubstringIndices(S, L){
 //   let wordLength = L[0].length;
@@ -2385,13 +2285,9 @@
 //   return ans
 // }
 
-
-
-// const S = "barfooapplefoobar";  
+// const S = "barfooapplefoobar";
 // const L = ["foo", "bar"];
 // console.log(findSubstringIndices(S, L));
-
-
 
 // function pattern(n){
 //   let start = 1;
@@ -2407,7 +2303,6 @@
 
 // }
 
-
 // console.log(pattern(5))
 
 // function pattern(str){
@@ -2421,7 +2316,6 @@
 // }
 
 // console.log(pattern("ABCDE"))
-
 
 // function pattern(star){
 //   let row = ""
@@ -2458,18 +2352,16 @@
 //     for(let j = 1; j<=i; j++){
 //       row+=" "
 //     }
-    
+
 //     for(let k = 1; k<=n-i+1; k++){
 //       row+=k + " "
 //     }
 //     console.log(row)
 
-    
 //   }
 // }
 
 // console.log(pattern(5))
-
 
 // function maxProfit(money, buyPrices, sellPrices){
 //   let i = 0;
@@ -2477,14 +2369,13 @@
 //   let profit = 0;
 //   while(i < buyPrices.length && j < sellPrices.length && profit < money){
 //     if(sellPrices[j] - buyPrices[i] > profit){
-//       profit = sellPrices[j] - buyPrices[i]; 
+//       profit = sellPrices[j] - buyPrices[i];
 //     }
 //     i++;
 //     j++
 //   }
 //   return profit
 // }
-
 
 // console.log(maxProfit(20, [5,1,2], [2,10,10]))
 
@@ -2493,7 +2384,7 @@
 //   let profit = 0;
 //   for(let i = 1; i<prices.length; i++){
 //     min = Math.min(min, prices[i]);
-    
+
 //   }
 //   let index = prices.findIndex(x => x == min)
 //   for(let i = index + 1; i<prices.length; i++){
@@ -2508,7 +2399,6 @@
 // let prices = [7, 1, 5, 3, 6, 4];
 // console.log(maxProfit(prices));
 
-
 // function maxSubArray(nums){
 //   let currentSum = nums[0];
 //   let maxSum = nums[0];
@@ -2521,12 +2411,8 @@
 //   return maxSum
 // }
 
-
-
-
 // let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 // console.log(maxSubArray(nums))
-
 
 // function minimizeSumAfterOperations(arr, k){
 //   arr.sort((a,b) => a - b)
@@ -2549,8 +2435,7 @@
 // let arr = [12,10,14];
 // let k = 2;
 // let result = minimizeSumAfterOperations(arr, k);
-// console.log("Minimized sum after", k, "operations:", result);  
-
+// console.log("Minimized sum after", k, "operations:", result);
 
 // function countBinaryStrings(N){
 //   let prevZeroCount = 1;
@@ -2584,16 +2469,12 @@
 
 //   }
 
-//   return Number(num1) + Number(num2) 
+//   return Number(num1) + Number(num2)
 // }
-
 
 // const N = 6;
 // const Arr = [6, 8, 4, 5, 2, 3];
 // console.log(minSumOfTwoNumbers(N, Arr))
-
-
-
 
 // function replaceWords(d, s){
 //   let arrStr = s.split(" ");
@@ -2613,7 +2494,6 @@
 // const sentence = "the cattle was rattled by the battery";
 // console.log(replaceWords(dictionary, sentence))
 
-
 // function countValidTriplets(A){
 //   let count = 0;
 //   for(let i = 0; i<A.length; i++){
@@ -2627,11 +2507,8 @@
 //   return count;
 // }
 
-
-
 // const A = [1, 2, 3, 4, 5];
-// console.log(countValidTriplets(A)); 
-
+// console.log(countValidTriplets(A));
 
 // function canAllPeopleSit(n, m, seats){
 //   let count = n;
@@ -2648,14 +2525,10 @@
 //   return "NO"
 // }
 
-
-
 // const n = 4;
 // const m = 7;
 // const seats = [1, 0, 1, 0, 1, 0, 1];
 // console.log(canAllPeopleSit(n, m, seats));
-
-
 
 // function isValid(str){
 
@@ -2676,17 +2549,14 @@
 //         return false;
 //       }
 //     }
-    
-//   }
 
+//   }
 
 //   return stack.length === 0;
 // }
 
-
-// console.log(isValid("()[]{}"));   
-// console.log(isValid("[([])]"));  
-
+// console.log(isValid("()[]{}"));
+// console.log(isValid("[([])]"));
 
 // function pal(str){
 //     let i = 0;
@@ -2703,17 +2573,15 @@
 
 // console.log(pal("nittin"))
 
-
 // function numberArray(arr){
 //     let ans = [];
 //     for(let i = 0; i<arr.length; i++){
 //         if(typeof arr[i] == "number"){
 //             ans.push(arr[i])
-//         }    
+//         }
 //     }
 //     return ans;
-// } 
-
+// }
 
 // console.log(numberArray(["a", 1 ,"b", 2 ,"c","d", 3 , 4 ,"e"]))
 
@@ -2727,7 +2595,7 @@
 //             count++
 //         }
 //         i++
-//     }   
+//     }
 
 //     let prefix = arr[0].substring(0, count);
 
@@ -2737,12 +2605,11 @@
 //             ans.push(arr[i])
 //         }
 //     }
-    
+
 //     return ans[ans.length - 1]
 // }
 
 // console.log(longestCommonPrefix(["interstellar", "internet", "internal", "intercept", "termiunal"]))
-
 
 // function reverseStr(str){
 //     let rev = "";
@@ -2753,7 +2620,6 @@
 // }
 
 // console.log(reverseStr("apple"))
-
 
 // function removeIntegers(arr){
 //     let ans = []
@@ -2771,14 +2637,13 @@
 //     return word.split("").sort().join("")
 // }
 
-
 // function groupAnagrams(arr){
 //     let n = arr.length;
 //     let ans = [];
 //     for(let i = 0; i<n; i++){
 //         ans.push(sortWord(arr[i]))
 //     }
-    
+
 //     let obj = {
 
 //     }
@@ -2794,17 +2659,14 @@
 //     return Object.values(obj)
 // }
 
-
 // console.log(groupAnagrams(["listen", "enlist", "google", "gooegl", "inlets", "banana"]))
-
 
 // function checkMagicSquare(n, matrix){
 //     let commonSum = 0;
 //     for(let i = 0; i<matrix[0].length; i++){
 //         commonSum+=matrix[0][i]
-//     }   
+//     }
 
-    
 //     for(let i = 0; i<n; i++){
 //         let rowSum = 0;
 //         for(let j = 0; j<n; j++){
@@ -2830,7 +2692,7 @@
 //     for(let i = 0; i<n; i++){
 //         primaryDiagonal+=matrix[i][i];
 //         secondaryDiagonal+=matrix[i][n-1-i];
-//     }   
+//     }
 //     if(primaryDiagonal !== commonSum && secondaryDiagonal !== commonSum){
 //         return false;
 //     }
@@ -2839,7 +2701,6 @@
 // }
 
 // console.log(checkMagicSquare(4, [[4,14,15,1], [9,7,6,12], [5,11,10,8],[16,2,3,13]]))
-
 
 // function capitalize(str){
 //     let ans = "";
@@ -2864,7 +2725,6 @@
 
 // console.log(capitalize('the quick Brown .... fox jumps over The lazy dog'))
 
-
 // function searchTarget(N, A, X){
 //     let start = 0;
 //     let end = N-1;
@@ -2885,9 +2745,6 @@
 
 // console.log(searchTarget(5, [1,3,5,7,13], 7))
 
-
-
-
 // function intersectionOfTwoArraysBasic(n, nums1, m , nums2){
 //     let arr = [];
 //     let map1 = new Map();
@@ -2898,7 +2755,7 @@
 //             map1.set(nums1[i], 1);
 //         }
 //     }
-    
+
 //     for(let i = 0; i<m; i++){
 //         if(map1.has(nums2[i])){
 //             arr.push(nums2[i]);
@@ -2913,9 +2770,8 @@
 
 // console.log(intersectionOfTwoArraysBasic(4, [1,2,2,1], 3, [2,2,1]))
 
-
 // function rearrange(str){
-    
+
 // }
 
 // console.log(rearrange("abcdef"))
@@ -2929,17 +2785,14 @@
 //             count--
 //         }
 //     }
-    
-// }
 
+// }
 
 // console.log(solution("LLRRLLRRR"))
 
 // function increase(){
 
 // }
-
-
 
 // function solution(arr){
 //     let ans = [];
@@ -2973,11 +2826,10 @@
 //         return ans.concat(str[str.length-1])
 //     }
 //     return ans
-    
+
 // }
 
 // console.log(solution("badcfe"))
-
 
 // const vowelCount = (str) => {
 //     let count = 0;
@@ -2987,10 +2839,9 @@
 //         }
 //     }
 //     return count;
-// } 
+// }
 
 // console.log(vowelCount("hello"))
-
 
 // function solution(str){
 //     let ans = "";
@@ -3005,11 +2856,9 @@
 //         return ans+(str[Math.floor(str.length/2)])
 //     }
 //     return ans;
-// }   
-
+// }
 
 // console.log(solution("abcde"))
-
 
 // function checkInc(arr){
 //     for(let i = 2; i<arr.length; i+=2){
@@ -3029,8 +2878,6 @@
 //     return true
 // }
 
-
-
 // function solution(num){
 //     if(checkInc(num)){
 //         return 'increasing'
@@ -3038,11 +2885,10 @@
 //         return 'decreasing'
 //     }
 //     return "none"
-    
+
 // }
 
 // console.log(solution([15, 65, 20, 72, 12, 72]))
-
 
 // function solution(str){
 //     let countL = 0;
@@ -3056,7 +2902,7 @@
 //     }
 
 //     return countL > countR ? "L" : countL < countR ? "R" : `""`
-// }   
+// }
 
 // console.log(solution("LRLRR"))
 
@@ -3074,7 +2920,6 @@
 // }
 
 // console.log(solution([1,2,1,-4,5,10]))
-
 
 // function hasUniqueCharecters(str){
 //     let map = new Map();
@@ -3097,7 +2942,6 @@
 
 // console.log(hasUniqueCharecters("helo"))
 
-
 // function checkInc(arr){
 //     for(let i = 2; i<=arr.length-1; i+=2){
 //         if(arr[i-2] > arr[i]){
@@ -3108,7 +2952,6 @@
 //     return true;
 // }
 
-
 // function checkDec(arr){
 //     for(let i = 2; i<=arr.length-1; i+=2){
 //         if(arr[i-2] < arr[i]){
@@ -3118,7 +2961,6 @@
 
 //     return true;
 // }
-
 
 // function orderOfAliens(arr){
 //     if(checkInc(arr)){
@@ -3131,9 +2973,8 @@
 
 // console.log(orderOfAliens([2,3,1,4,2]))
 
-
 // function subsequence(str){
-//     let i = 0; 
+//     let i = 0;
 //     let count = 0;
 //     let max = 0;
 //     while(i < str.length){
@@ -3175,9 +3016,6 @@
 
 // console.log(findOne([0,0,0,1,1,1]))
 
-
-
-
 // function findOne(arr){
 //     let l = 0;
 //     let r = arr.length - 1;
@@ -3201,7 +3039,6 @@
 
 // console.log(findOne([0,0,0,1,1,1]))
 
-
 // function rotatedSorted(arr){
 //     let l = 0;
 //     let r = arr.length - 1;
@@ -3217,10 +3054,9 @@
 //             r = mid - 1;
 //         }
 //     }
-    
+
 //     console.log(start, l, r)
 // }
-
 
 // console.log(rotatedSorted([4,5,6,7,8,9,1,2,3]))
 // function calculateTime(arr, mid){
@@ -3231,7 +3067,6 @@
 
 //     return time;
 // }
-
 
 // function bookReading(arr, h){ // o(n log max);
 //     let l = 0;
@@ -3267,7 +3102,6 @@
 //     return count;
 // }
 
-
 // function countOfElementsLessOrEqual(matrix, mid){
 //     let n = matrix.length;
 //     let count = 0;
@@ -3282,7 +3116,6 @@
 //     }
 //     return count;
 // }
-
 
 // function kthSmallestElement(matrix, k){
 //     let n = matrix.length;
@@ -3309,12 +3142,10 @@
 
 // console.log(kthSmallestElement([[1,5,9],[10,11,13], [12,13,15]], 8))
 
-
-
 // function diffBetweenSumLeftRight(arr){
 //     let ans = [];
 //     let sum = 0;
-//     let sum2 = 0; 
+//     let sum2 = 0;
 //     for(let i = 0; i<arr.length; i++){
 //         sum = 0
 //         for(let j = i+1; j<arr.length; j++){
@@ -3341,8 +3172,6 @@
 //     return sum;
 // }
 
-
-
 // function profitSearch(arr, n, order){
 //     let l = 0;
 //     let r = 1000000000;
@@ -3366,15 +3195,14 @@
 // // mid = 250, 125 , 62, 31, 15, 115 - 69/2 = 23 // 115 - 77 = 38/2 = 19, 115-81 // 17
 // //ptime = 42, 29,19,13,8,11
 // // ptime > 10 r = mid - 1 // r = 250-100 = 150 // r = 125 - 100 = 25 // r = 62 - 100 = -38 // r = 31 - 100 = -69 // 23 - 100 = -77 // 19 - 100 = -81 // 17 - 100 = -83
-// //ptimw < 10 l = mid + 1 // 15 + 100 = 115 
+// //ptimw < 10 l = mid + 1 // 15 + 100 = 115
 // console.log(profitSearch([1,2,3,4], 4, 10))
-
 
 // function manipulate(str1, str2){
 //     if(str1.length != str2.length){
 //         return false
 //     }
-    
+
 //     let len = 0;
 //     str1.length > str2.length ? len = str1.length : len = str2.length;
 //     let count = 0;
@@ -3388,9 +3216,7 @@
 //     return count == 0
 // }
 
-// console.log(manipulate("heloaa", "heloaa"))    
-
-
+// console.log(manipulate("heloaa", "heloaa"))
 
 // function minPosValue(arr){
 //     let prefixSum = new Array(arr.length);
@@ -3403,7 +3229,6 @@
 // }
 
 // console.log(minPosValue([-4,2,-3,2,6]))
-
 
 // function wiggleSort(arr, n){
 //     for(let i = 1; i<n; i+=2){
@@ -3424,7 +3249,6 @@
 // }
 
 // console.log(wiggleSort([1,5,1,1,6,4], 6))
-
 
 // function findDuplicates(arr, n){
 //     // const set = new Set();
@@ -3450,7 +3274,6 @@
 // }
 
 // console.log(findDuplicates([4,3,2,7,8,2,3,1], 8))
-
 
 // function removeDuplicates(arr){
 //     let set = [...new Set(arr)];
@@ -3482,7 +3305,6 @@
 // }
 // console.log(firstIndexOfStr("sadbutsad", "sad"))
 
-
 // function repeatedSubstringPattern(str){
 //     let n = str.length;
 //     for(let i = 1 ; i<=n/2; i++){
@@ -3496,8 +3318,6 @@
 
 // console.log(repeatedSubstringPattern("abcabc")); // Output: 2
 // console.log(repeatedSubstringPattern("cccc"));   // Output: 4
-
-
 
 // function findNextNumber(input){
 //     let res = "";
@@ -3514,7 +3334,6 @@
 //     return res;
 // }
 
-
 // const input = '1124';
 // console.log(findNextNumber(input));
 
@@ -3530,7 +3349,6 @@
 //     return str.includes(ogStr)
 // }
 
-
 // function repeatedStringMatch(a, b){
 //     let count = 1;
 //     for(let i = 1; i<=b.length; i++){
@@ -3544,8 +3362,6 @@
 // }
 
 // console.log(repeatedStringMatch("abcd", "cdabcdab"))
-
-
 
 // function largestSum(arr){
 //     arr.sort((a,b) => {
@@ -3562,7 +3378,7 @@
 
 //     while(n !== 1){
 //         n = String(n).split('').reduce((sum, digit) => sum + Math.pow(parseInt(digit), 2), 0);
-        
+
 //         if(seen.has(n)){
 //             return false
 //         }
@@ -3576,7 +3392,7 @@
 // console.log(happyNumber(19))
 
 // function searchingChallenge(str){
-    
+
 //     let stack = [];
 //     for(let i = 0; i<str.length; i++){
 //         let char =  str[i];
@@ -3592,10 +3408,70 @@
 //     return stack.length === 0 ? 1 : 0;
 // }
 
-
-
-
 // console.log(searchingChallenge("(hello (world)[c])")); // Output: 1
 // console.log(searchingChallenge("((hello (world))")); // Output: 0
 // console.log(searchingChallenge("(hello)(world))")); // Output: 0
 // console.log(searchingChallenge("(h(ello)) w(orld)"));
+
+// function removeSpaces(str){
+//     let ans = "";
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i] >= 'a' && str[i] <= 'z'){
+//             ans+=str[i]
+//         }
+//     }
+
+//     return ans;
+// }
+
+// console.log(removeSpaces("he llo world"))
+
+// function repeatedSubStringPattern(str){
+//     let n = str.length;
+//     for(let i = 1; i<=n/2; i++){
+//         if(n%i === 0){
+//             let sub = str.substring(0, i);
+//             if(sub.repeat(n/i) === str){
+//                 return n/i
+//             }
+//         }
+//     }
+//     return 1
+// }
+
+
+// console.log(repeatedSubStringPattern("abcabc")); // Output: 2
+// console.log(repeatedSubStringPattern("c"));
+
+// function repeatStr(str, times){
+//     return str.repeat(times)
+// }
+
+
+// function repeatedStringMatch(a, b){
+//     let n = b.length;
+//     for(let i = 1; i<=n; i++){
+//         if(repeatStr(a, i).includes(b)){
+//             return i;
+//         }
+//     }
+// }
+
+// console.log(repeatedStringMatch("abc", "cabcabcabcabca"))
+
+
+
+// function happyNumber(n){
+//     let seen = new Set();
+
+//     while(n !== 1){
+//         n = String(n).split('').reduce((acc, init) => acc + Math.pow(parseInt(init), 2), 0);
+//         if(seen.has(n)){
+//             return false;
+//         }
+//         seen.add(n)
+//     }
+//     return true
+// }
+
+// console.log(happyNumber(2));
