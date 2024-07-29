@@ -1,10 +1,10 @@
 {
   "name": "dsa",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node test.js",
+    "dev": "nodemon test.js"
   },
   "keywords": [],
   "type": "module",
