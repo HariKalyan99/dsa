@@ -3475,3 +3475,53 @@
 // }
 
 // console.log(happyNumber(2));
+
+
+// let obj = {
+//     "one": 1,
+//     "two": 2,
+//     "three": 3
+// }
+
+// let obj2 = {...obj, three: 4, "four": 5};
+// obj2.four = 4
+// obj2.three = 3
+// obj2.ob = [{"one": 1, "two": 2}]
+// console.log({...obj2, ob: {...obj2.ob[0], "three": 3}})
+
+
+// function searchingChallenge(str){
+//     let stack = [];
+//     for(let char of str){
+//         if(char == "("){
+//             stack.push(char)
+//         }else if(char == ")"){
+//             if(stack.length == 0){
+//                 return 0;
+//             }
+//             stack.pop()
+//         }
+//     }
+//     return stack.length === 0 ? 1 : 0
+// }
+
+// console.log(searchingChallenge("(hello (world)[c])"));
+
+
+
+
+
+// function palNum(val){
+//     let rev = 0;
+//     let temp = val;
+
+//     while(val > 0){
+//         rev = (rev * 10) + (val%10);
+//         val = Math.floor(val/10)
+//     }
+    
+//     return temp == rev
+// }
+
+
+// console.log(palNum(101));
